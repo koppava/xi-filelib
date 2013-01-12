@@ -33,6 +33,17 @@ class IdentityMapTest extends TestCase
     /**
      * @test
      */
+    public function implementsIdentityMapInterface()
+    {
+        $this->assertTrue(class_exists('Xi\Filelib\IdentityMap\IdentityMap'));
+        $this->assertTrue(
+            is_subclass_of('Xi\Filelib\IdentityMap\IdentityMap', 'Xi\Filelib\IdentityMap\IdentityMapInterface')
+        );
+    }
+
+    /**
+     * @test
+     */
     public function constructorSubscribesToEvents()
     {
         $this->ed

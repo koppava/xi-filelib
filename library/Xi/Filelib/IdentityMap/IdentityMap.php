@@ -17,7 +17,7 @@ use Iterator;
 /**
  * Identity map
  */
-class IdentityMap implements EventSubscriberInterface
+class IdentityMap implements EventSubscriberInterface, IdentityMapInterface
 {
     /**
      * @var EventDispatcherInterface
@@ -198,7 +198,7 @@ class IdentityMap implements EventSubscriberInterface
      */
     protected function getIdentifierFromObject(Identifiable $object)
     {
-        return get_class($object) . ' ' . $object->getId();
+        return $this->getIdentifier($object->getId(), get_class($object));
     }
 
     /**
