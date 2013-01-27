@@ -111,6 +111,7 @@ class SequentialLinkerTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      * @dataProvider provideFiles
      */
     public function linkerShouldCreateProperSequentialLinks($file, $levels, $fpd, $beautifurl)
@@ -124,6 +125,7 @@ class SequentialLinkerTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      * @dataProvider provideFiles
      */
     public function versionLinkerShouldCreateProperBeautifurlLinks($file, $levels, $fpd, $beautifurl)
@@ -146,6 +148,7 @@ class SequentialLinkerTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      * @expectedException Xi\Filelib\Exception\InvalidArgumentException
      */
     public function getDirectoryIdShouldThrowExceptionWithNonNumericFileIds()
@@ -159,6 +162,7 @@ class SequentialLinkerTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      * @expectedException Xi\Filelib\Exception\InvalidArgumentException
      */
     public function getDirectoryIdShouldThrowExceptionWhenDirectoryLevelsIsLessThanOne()

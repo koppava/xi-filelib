@@ -72,6 +72,7 @@ class FFmpegHelperTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function classShouldExist()
     {
@@ -80,6 +81,7 @@ class FFmpegHelperTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      * @expectedException InvalidArgumentException
      */
     public function constructorShouldFailWithNonArrayOptions()
@@ -89,6 +91,7 @@ class FFmpegHelperTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function constructorShouldPassWithArrayOptions()
     {
@@ -97,6 +100,7 @@ class FFmpegHelperTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function setCommandThrowsOnEmptyCommand()
     {
@@ -109,6 +113,7 @@ class FFmpegHelperTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function settersAndGettersShouldWorkAsExpected()
     {
@@ -150,6 +155,7 @@ class FFmpegHelperTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      * @dataProvider invalidOutputFilenames
      * @expectedException Xi\Filelib\Exception\InvalidArgumentException
      */
@@ -172,6 +178,7 @@ class FFmpegHelperTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      * @dataProvider numberedOutputFilenames
      * @expectedException Xi\Filelib\Exception\InvalidArgumentException
      */
@@ -186,6 +193,7 @@ class FFmpegHelperTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function testShellArguments()
     {
@@ -203,6 +211,10 @@ class FFmpegHelperTest extends \Xi\Filelib\Tests\TestCase
         );
     }
 
+    /**
+     * @test
+     * @group parallel
+     */
     public function testGetCommandLine()
     {
         $ffmpeg = new FFmpegHelper($this->config);
@@ -216,6 +228,7 @@ class FFmpegHelperTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function testGetOutputPathnames()
     {
@@ -233,6 +246,7 @@ class FFmpegHelperTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function executeShouldWriteOutputFiles()
     {
@@ -292,6 +306,7 @@ class FFmpegHelperTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function runProcessThrowsRuntimeExceptionOnFailedProcess()
     {
@@ -302,6 +317,7 @@ class FFmpegHelperTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function testGetVideoInfo()
     {
@@ -339,6 +355,7 @@ JSON;
 
     /**
      * @test
+     * @group parallel
      */
     public function testGetDuration()
     {

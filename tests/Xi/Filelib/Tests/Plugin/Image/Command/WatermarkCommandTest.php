@@ -20,6 +20,7 @@ class WatermarkCommandTest extends TestCase
 {
     /**
      * @test
+     * @group parallel
      */
     public function gettersAndSettersShouldWorkAsExpected()
     {
@@ -43,6 +44,7 @@ class WatermarkCommandTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      * @expectedException InvalidArgumentException
      */
     public function setWatermarkPositionShouldFailWithInvalidPosition()
@@ -53,6 +55,7 @@ class WatermarkCommandTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      * @expectedException InvalidArgumentException
      */
     public function setWatermarkPositionShouldFailWithNonStringPosition()
@@ -87,6 +90,7 @@ class WatermarkCommandTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      * @dataProvider provideDataForCoordinateCalculation
      * @param array   $expected
      * @param array   $imagickO
@@ -126,6 +130,7 @@ class WatermarkCommandTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function getWatermarkShouldReturnImagickResourceAndCacheIt()
     {
@@ -148,6 +153,7 @@ class WatermarkCommandTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function destructWatermarkResourceShouldDestroyImagickResource()
     {
@@ -172,6 +178,7 @@ class WatermarkCommandTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function destructWatermarkShouldDoNothingWhenImagickResourceDoesNotExist()
     {
@@ -190,6 +197,7 @@ class WatermarkCommandTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      * @expectedException \InvalidArgumentException
      */
     public function executeShouldThrowExceptionWhenCreatingWatermarkResourceFails()
@@ -206,6 +214,7 @@ class WatermarkCommandTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function executeShouldExecuteCorrectly()
     {

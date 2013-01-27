@@ -21,6 +21,7 @@ class RandomizeNamePluginTest extends TestCase
 {
     /**
      * @test
+     * @group parallel
      */
     public function gettersAndSettersShouldWorkAsExpected()
     {
@@ -46,6 +47,7 @@ class RandomizeNamePluginTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function beforeUploadShouldExitEarlyIfPluginDoesntHaveProfile()
     {
@@ -66,6 +68,7 @@ class RandomizeNamePluginTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function beforeUploadShouldRandomizeUploadFilename()
     {
@@ -97,6 +100,7 @@ class RandomizeNamePluginTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function beforeUploadShouldRandomizeOverriddenUploadFilename()
     {
@@ -137,6 +141,7 @@ class RandomizeNamePluginTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      * @dataProvider providePrefixes
      */
     public function beforeUploadShouldPrefixRandomizedName($prefix)
@@ -161,6 +166,7 @@ class RandomizeNamePluginTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function getSubscribedEventsShouldReturnCorrectEvents()
     {

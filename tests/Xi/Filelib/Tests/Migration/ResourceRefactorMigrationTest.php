@@ -10,6 +10,7 @@ class ResourceRefactorMigrationTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function classShouldExist()
     {
@@ -19,6 +20,7 @@ class ResourceRefactorMigrationTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function executeShouldMigrate()
     {

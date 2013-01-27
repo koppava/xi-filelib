@@ -20,6 +20,7 @@ class ExecuteMethodCommandTest extends TestCase
 {
     /**
      * @test
+     * @group parallel
      */
     public function gettersAndSettersShouldWorkAsExpected()
     {
@@ -38,6 +39,7 @@ class ExecuteMethodCommandTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      * @expectedException BadMethodCallException
      */
     public function executeShouldFailWhenMethodIsNotCallable()
@@ -56,6 +58,7 @@ class ExecuteMethodCommandTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function executeShouldExecuteImagemagicksMethodWhenMethodIsCallable()
     {

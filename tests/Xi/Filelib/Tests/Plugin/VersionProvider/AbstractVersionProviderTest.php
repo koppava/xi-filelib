@@ -90,6 +90,7 @@ class AbstractVersionProviderTest extends TestCase
     /**
      * @dataProvider provideVersions
      * @test
+     * @group parallel
      */
     public function areVersionsCreatedShouldReturnExpectedResults($resourceVersions, $pluginVersions, $sharedVersionsAllowed, $expectResourceGetVersions)
     {
@@ -124,6 +125,7 @@ class AbstractVersionProviderTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function gettersAndSettersShouldWorkAsExpected()
     {
@@ -140,6 +142,7 @@ class AbstractVersionProviderTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      * @expectedException Xi\Filelib\FilelibException
      */
     public function initShouldFailWhenIdentifierIsNotDefined()
@@ -149,6 +152,7 @@ class AbstractVersionProviderTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function initShouldPassWhenIdentifierIsDefined()
     {
@@ -158,6 +162,7 @@ class AbstractVersionProviderTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function initShouldPassWhenIdentifierAndExtensionAreSetAndProvidesAreSetToPlugin()
     {
@@ -169,6 +174,7 @@ class AbstractVersionProviderTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function initShouldRegisterToProfilesWhenIdentifierAndExtensionAreSetAndProvidesAndProfilesAreSetToPlugin()
     {
@@ -224,6 +230,7 @@ class AbstractVersionProviderTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      * @dataProvider provideFilesForProvidesForMatching
      */
     public function providesForShouldMatchAgainstFileProfileCorrectly($expected, $file)
@@ -242,6 +249,7 @@ class AbstractVersionProviderTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function afterUploadShouldDoNothingWhenPluginDoesNotProvide()
     {
@@ -261,6 +269,7 @@ class AbstractVersionProviderTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function afterUploadShouldDoNothingWhenVersionAlreadyExists()
     {
@@ -297,6 +306,7 @@ class AbstractVersionProviderTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      * @dataProvider provideSharedVersionsAllowed
      */
     public function afterUploadShouldCreateAndStoreVersionsWhenAllIsProper($sharedVersionsAllowed)
@@ -342,6 +352,7 @@ class AbstractVersionProviderTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function onPublishShouldDoNothingWhenPluginDoesNotProvide()
     {
@@ -361,6 +372,7 @@ class AbstractVersionProviderTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function onPublishShouldPublishWhenPluginProvides()
     {
@@ -382,6 +394,7 @@ class AbstractVersionProviderTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function onUnpublishShouldDoNothingWhenPluginDoesNotProvide()
     {
@@ -401,6 +414,7 @@ class AbstractVersionProviderTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function onUnpublishShouldUnpublishWhenPluginProvides()
     {
@@ -426,6 +440,7 @@ class AbstractVersionProviderTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function onUnpublishShouldExitEarlyWhenPluginDoesntHaveProfile()
     {
@@ -445,6 +460,7 @@ class AbstractVersionProviderTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function onPublishShouldExitEarlyWhenPluginDoesntHaveProfile()
     {
@@ -464,6 +480,7 @@ class AbstractVersionProviderTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function afterUploadShouldExitEarlyWhenPluginDoesntHaveProfile()
     {
@@ -487,6 +504,7 @@ class AbstractVersionProviderTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function onFileDeleteShouldDoNothingWhenPluginDoesNotProvide()
     {
@@ -506,6 +524,7 @@ class AbstractVersionProviderTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function onFileDeleteShouldExitEarlyWhenPluginDoesntHaveProfile()
     {
@@ -525,6 +544,7 @@ class AbstractVersionProviderTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      * @group watussi
      */
     public function onFileDeleteShouldDeleteWhenPluginProvides()
@@ -563,6 +583,7 @@ class AbstractVersionProviderTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function getSubscribedEventsShouldReturnCorrectEvents()
     {
@@ -604,6 +625,7 @@ class AbstractVersionProviderTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function getsStorage()
     {
@@ -612,6 +634,7 @@ class AbstractVersionProviderTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function getsPublisher()
     {
@@ -620,6 +643,7 @@ class AbstractVersionProviderTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function onDeleteResourceShouldDelegateToStorage()
     {

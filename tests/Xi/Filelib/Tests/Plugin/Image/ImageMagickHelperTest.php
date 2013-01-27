@@ -19,6 +19,7 @@ class ImageMagickHelperTest extends TestCase
 {
     /**
      * @test
+     * @group parallel
      */
     public function classShouldExist()
     {
@@ -27,6 +28,7 @@ class ImageMagickHelperTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      * @expectedException \InvalidArgumentException
      */
     public function constructorShouldFailWithNonArrayOptions()
@@ -38,6 +40,7 @@ class ImageMagickHelperTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function constructorShouldPassWithArrayOptions()
     {
@@ -48,6 +51,7 @@ class ImageMagickHelperTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function createImagickShouldReturnNewImagickObject()
     {
@@ -60,6 +64,7 @@ class ImageMagickHelperTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      * @expectedException InvalidArgumentException
      */
     public function createImagickShouldFailWithNonExistingFile()
@@ -72,6 +77,7 @@ class ImageMagickHelperTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      * @expectedException InvalidArgumentException
      */
     public function createImagickShouldFailWithInvalidFile()
@@ -83,6 +89,7 @@ class ImageMagickHelperTest extends TestCase
 
     /*
      * @test
+     * @group parallel
      */
     public function gettersAndSettersShouldWorkAsExpected()
     {
@@ -96,6 +103,7 @@ class ImageMagickHelperTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      * @expectedException \InvalidArgumentException
      */
     public function createCommandFromArrayShouldFailWithNonArray()
@@ -108,6 +116,7 @@ class ImageMagickHelperTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      * @expectedException \InvalidArgumentException
      */
     public function createCommandFromArrayShouldFailWithArrayWithNoTypeKey()
@@ -122,6 +131,7 @@ class ImageMagickHelperTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      * @expectedException \InvalidArgumentException
      */
     public function createCommandFromArrayShouldFailWithArrayWithNonStringTypeKey()
@@ -137,6 +147,7 @@ class ImageMagickHelperTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      * @expectedException \InvalidArgumentException
      */
     public function createCommandFromArrayShouldFailWithArrayWithInvalidClass()
@@ -152,6 +163,7 @@ class ImageMagickHelperTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function createCommandFromArrayShouldPassWhenAllIsWell()
     {
@@ -170,6 +182,7 @@ class ImageMagickHelperTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function addCommandShouldAddCommand()
     {
@@ -196,6 +209,7 @@ class ImageMagickHelperTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function setCommandsShouldIterateAllCommands()
     {
@@ -222,6 +236,7 @@ class ImageMagickHelperTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function executeShouldExecuteAllOptionsAndCommandsCorrectly()
     {

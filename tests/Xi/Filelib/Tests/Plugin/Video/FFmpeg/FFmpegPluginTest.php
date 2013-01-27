@@ -92,6 +92,7 @@ class FFmpegPluginTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function classShouldExist()
     {
@@ -104,6 +105,7 @@ class FFmpegPluginTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function getHelperShouldReturnFFmpegHelper()
     {
@@ -115,6 +117,7 @@ class FFmpegPluginTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function testCreateVersions()
     {
@@ -142,6 +145,7 @@ class FFmpegPluginTest extends \Xi\Filelib\Tests\TestCase
 
      /**
      * @test
+     * @group parallel
      */
     public function testExtensionFor()
     {
@@ -151,6 +155,7 @@ class FFmpegPluginTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function testGetVersions()
     {
@@ -159,6 +164,7 @@ class FFmpegPluginTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function pluginShouldAllowSharedResource()
     {
@@ -167,6 +173,7 @@ class FFmpegPluginTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function pluginShouldAllowSharedVersions()
     {

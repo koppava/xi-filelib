@@ -45,6 +45,7 @@ class ChangeFormatPluginTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function classExtendsAbstractPlugin()
     {
@@ -56,6 +57,7 @@ class ChangeFormatPluginTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function gettersAndSettersShouldWorkAsExpected()
     {
@@ -68,6 +70,7 @@ class ChangeFormatPluginTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function getImageMagickHelperShouldReturnImageMagickHelper()
     {
@@ -79,6 +82,7 @@ class ChangeFormatPluginTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function beforeUploadShouldExitEarlyIfPluginDoesntHaveProfile()
     {
@@ -97,6 +101,7 @@ class ChangeFormatPluginTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function beforeUploadShouldReturnSameUploadWhenNotImage()
     {
@@ -120,6 +125,7 @@ class ChangeFormatPluginTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function beforeUploadShouldReturnNewUploadWhenImage()
     {
@@ -181,6 +187,7 @@ class ChangeFormatPluginTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function getSubscribedEventsShouldReturnCorrectEvents()
     {

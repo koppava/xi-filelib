@@ -18,6 +18,7 @@ class PluginTest extends TestCase
 {
     /**
      * @test
+     * @group parallel
      */
     public function interfaceShouldExist()
     {

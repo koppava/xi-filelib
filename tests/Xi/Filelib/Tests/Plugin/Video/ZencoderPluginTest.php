@@ -120,6 +120,7 @@ class ZencoderPluginTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function settersAndGettersShouldWorkAsExpected()
     {
@@ -151,6 +152,7 @@ class ZencoderPluginTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function getServiceShouldReturnAndCacheZencoderService()
     {
@@ -161,6 +163,7 @@ class ZencoderPluginTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function getAwsServiceShouldReturnAndCacheAwsService()
     {
@@ -171,6 +174,7 @@ class ZencoderPluginTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function getExtensionForShouldDigOutputsForTheCorrectExtension()
     {
@@ -199,6 +203,7 @@ class ZencoderPluginTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function getVersionsShouldReturnCorrectVersions()
     {
@@ -207,6 +212,7 @@ class ZencoderPluginTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function getOutputsToZencoderShouldReturnCorrectData()
     {
@@ -221,6 +227,7 @@ class ZencoderPluginTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function classShouldExist()
     {
@@ -230,6 +237,7 @@ class ZencoderPluginTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function pluginShouldProvideForVideo()
     {
@@ -238,6 +246,7 @@ class ZencoderPluginTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function createVersionsShouldCreateVersions()
     {
@@ -343,6 +352,7 @@ class ZencoderPluginTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function createVersionsShouldThrowExceptionOnZencoderError()
     {
@@ -385,6 +395,7 @@ class ZencoderPluginTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function pluginShouldAllowSharedResource()
     {
@@ -393,6 +404,7 @@ class ZencoderPluginTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function pluginShouldAllowSharedVersions()
     {
@@ -401,6 +413,7 @@ class ZencoderPluginTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function getSubscribedEventsShouldReturnCorrectEvents()
     {

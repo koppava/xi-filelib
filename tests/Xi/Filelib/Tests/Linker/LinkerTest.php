@@ -18,6 +18,7 @@ class LinkerTest extends TestCase
 {
     /**
      * @test
+     * @group parallel
      */
     public function interfaceShouldExist()
     {

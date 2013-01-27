@@ -129,6 +129,7 @@ class BeautifurlLinkerTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      * @dataProvider provideFiles
      */
     public function linkerShouldCreateProperBeautifurlLinks($file, $beautifurl)
@@ -141,6 +142,7 @@ class BeautifurlLinkerTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      * @dataProvider provideFiles
      */
     public function versionLinkerShouldCreateProperBeautifurlLinks($file, $beautifurl)
@@ -170,6 +172,7 @@ class BeautifurlLinkerTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function linkerShouldExcludeRootProperly()
     {
@@ -188,6 +191,7 @@ class BeautifurlLinkerTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function linkerShouldNotSlugifyWhenSlugifyIsSetToFalse()
     {
@@ -207,6 +211,7 @@ class BeautifurlLinkerTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function excludeRootSetterAndGetterShouldWorkAsExpected()
     {
@@ -217,6 +222,7 @@ class BeautifurlLinkerTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function slugifyRootSetterAndGetterShouldWorkAsExpected()
     {
@@ -227,6 +233,7 @@ class BeautifurlLinkerTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function getSlugifierShouldReturnSlugifier()
     {
@@ -242,6 +249,7 @@ class BeautifurlLinkerTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function takesOptionalOptionsInConstructor()
     {

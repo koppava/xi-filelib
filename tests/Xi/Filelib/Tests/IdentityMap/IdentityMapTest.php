@@ -32,6 +32,7 @@ class IdentityMapTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function constructorSubscribesToEvents()
     {
@@ -46,6 +47,7 @@ class IdentityMapTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function getEventDispatcherReturnsEventDispatcher()
     {
@@ -66,6 +68,7 @@ class IdentityMapTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function implementsEventSubscriberInterface()
     {
@@ -77,6 +80,7 @@ class IdentityMapTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function subscribesToCorrectEvents()
     {
@@ -93,6 +97,7 @@ class IdentityMapTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function onCreateAddsFile()
     {
@@ -114,6 +119,7 @@ class IdentityMapTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function onDeleteRemovesFolder()
     {
@@ -135,6 +141,7 @@ class IdentityMapTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      * @dataProvider provideAddableObjects
      */
     public function hasShouldReturnFalseForUnidentifiedObject(Identifiable $object)
@@ -144,6 +151,7 @@ class IdentityMapTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      * @dataProvider provideAddableObjects
      */
     public function hasShouldReturnFalseForUnidentifiedObjectButTrueAfterItHasBeenAdded(Identifiable $object)
@@ -155,6 +163,7 @@ class IdentityMapTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      * @expectedException Xi\Filelib\IdentityMap\IdentityMapException
      */
     public function addShouldThrowExceptionWhenAddingObjectWithoutId()
@@ -168,6 +177,7 @@ class IdentityMapTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      * @dataProvider provideAddableObjects
      */
     public function addingAnAlreadyExistingObjectShouldReturnFalse(Identifiable $object)
@@ -190,6 +200,7 @@ class IdentityMapTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function addManyAddsAllObjectsAndRewindsIterator()
     {
@@ -221,6 +232,7 @@ class IdentityMapTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function removeManyDeletesAllObjectsAndRewindsIterator()
     {
@@ -249,6 +261,7 @@ class IdentityMapTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function getShouldReturnFalseWhenObjectNotFound()
     {
@@ -258,6 +271,7 @@ class IdentityMapTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      * @dataProvider provideAddableObjects
      */
     public function getShouldReturnSameInstanceWhenObjectIsFound(Identifiable $object)
@@ -284,6 +298,7 @@ class IdentityMapTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      * @dataProvider provideAddableObjects
      */
     public function removeShouldRemoveObject(Identifiable $object)
@@ -316,6 +331,7 @@ class IdentityMapTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function removeShouldCleanInternalStateCorrectly()
     {
@@ -345,6 +361,7 @@ class IdentityMapTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      * @dataProvider provideAddableObjects
      */
     public function removingUnexistingObjectShouldReturnFalse(Identifiable $object)

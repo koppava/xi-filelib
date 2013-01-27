@@ -18,6 +18,7 @@ class AbstractLinkerTest extends TestCase
 {
     /**
      * @test
+     * @group parallel
      */
     public function implementsLinker()
     {

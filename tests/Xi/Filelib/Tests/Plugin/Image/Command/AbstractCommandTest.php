@@ -18,6 +18,7 @@ class AbstractCommandTest extends TestCase
 {
     /**
      * @test
+     * @group parallel
      * @expectedException PHPUnit_Framework_Error
      */
     public function constructorShouldFailWithNonArrayOptions()
@@ -30,6 +31,7 @@ class AbstractCommandTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function constructorShouldPassWithArrayOptions()
     {
@@ -41,6 +43,7 @@ class AbstractCommandTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function createImagickShouldReturnNewImagickObject()
     {
@@ -55,6 +58,7 @@ class AbstractCommandTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      * @expectedException InvalidArgumentException
      */
     public function createImagickShouldFailWithNonExistingFile()
@@ -70,6 +74,7 @@ class AbstractCommandTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      * @expectedException InvalidArgumentException
      */
     public function createImagickShouldFailWithInvalidFile()

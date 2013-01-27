@@ -20,6 +20,7 @@ class AbstractPluginTest extends TestCase
 {
     /**
      * @test
+     * @group parallel
      */
     public function classShouldExist()
     {
@@ -29,6 +30,7 @@ class AbstractPluginTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function gettersAndSettersShouldWorkAsExpected()
     {
@@ -44,6 +46,7 @@ class AbstractPluginTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function hasProfileShouldReturnWhetherPluginBelongsToAProfile()
     {
@@ -59,6 +62,7 @@ class AbstractPluginTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function emptyHooksShouldBeCallableAndReturnExpectedValues()
     {
@@ -71,6 +75,7 @@ class AbstractPluginTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function getSubscribedEventsShouldReturnEmptyArray()
     {
@@ -80,6 +85,7 @@ class AbstractPluginTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function onFileProfileAddShouldAddPluginToProfileIfPluginHasProfile()
     {
@@ -100,6 +106,7 @@ class AbstractPluginTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function onFileProfileAddShouldNotAddPluginToProfileIfPluginDoesNotHaveProfile()
     {

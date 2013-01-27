@@ -64,6 +64,7 @@ class VersionPluginTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function classExtendsAbstractPlugin()
     {
@@ -75,6 +76,7 @@ class VersionPluginTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function pluginShouldProvideForImage()
     {
@@ -83,6 +85,7 @@ class VersionPluginTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function pluginShouldAllowSharedResource()
     {
@@ -91,6 +94,7 @@ class VersionPluginTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function pluginShouldAllowSharedVersions()
     {
@@ -99,6 +103,7 @@ class VersionPluginTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function getImageMagickHelperShouldReturnImageMagickHelper()
     {
@@ -110,6 +115,7 @@ class VersionPluginTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function createVersionsShouldCreateVersions()
     {
@@ -157,6 +163,7 @@ class VersionPluginTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function getSubscribedEventsShouldReturnCorrectEvents()
     {
@@ -171,6 +178,7 @@ class VersionPluginTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function getVersionsShouldReturnArrayOfOneContainingIdentifier()
     {
@@ -181,6 +189,7 @@ class VersionPluginTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function gettersAndSettersShouldWork()
     {
@@ -193,6 +202,7 @@ class VersionPluginTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function getExtensionForShouldDelegateToGetExtension()
     {
@@ -208,6 +218,7 @@ class VersionPluginTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function getsTempDir()
     {
