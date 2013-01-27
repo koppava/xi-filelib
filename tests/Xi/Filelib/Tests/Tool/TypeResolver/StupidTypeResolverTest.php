@@ -9,6 +9,7 @@ class StupidTypeResolverTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function classShouldExist()
     {
@@ -28,6 +29,7 @@ class StupidTypeResolverTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      * @dataProvider provideMimeTypes
      */
     public function stupidTypeResolverShouldStupidlyResolveType($expected, $mimeType)

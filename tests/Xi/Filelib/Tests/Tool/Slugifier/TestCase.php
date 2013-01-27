@@ -14,6 +14,7 @@ class TestCase extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function slugifierShouldSlugifySimpleNonUnicodeStringsProperly()
     {
@@ -24,6 +25,7 @@ class TestCase extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function slugifyPathShouldSlugifyAllPartsOfAPath()
     {

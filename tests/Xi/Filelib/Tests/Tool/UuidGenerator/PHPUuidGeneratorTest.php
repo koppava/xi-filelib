@@ -9,6 +9,7 @@ class PHPUuidGeneratorTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function classShouldExist()
     {
@@ -18,6 +19,7 @@ class PHPUuidGeneratorTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function v4ShouldGenerateUuidV4()
     {

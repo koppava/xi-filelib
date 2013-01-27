@@ -4,7 +4,7 @@ namespace Xi\Filelib\Tests\Tool\MimeTypeResolver;
 
 use Xi\Filelib\Tool\MimeTypeResolver\SymfonyMimeTypeResolver;
 
-class SymfonyTypeResolverTest extends TestCase
+class SymfonyMimeTypeResolverTest extends TestCase
 {
     public function setUp()
     {
@@ -15,5 +15,4 @@ class SymfonyTypeResolverTest extends TestCase
         parent::setUp();
         $this->resolver = new SymfonyMimeTypeResolver();
     }
-
 }

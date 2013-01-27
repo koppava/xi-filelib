@@ -7,6 +7,7 @@ class AbstractZendSlugifierTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function classShouldExist()
     {
@@ -16,6 +17,7 @@ class AbstractZendSlugifierTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function getTransliteratorShouldReturnTransliterator()
     {
@@ -30,6 +32,7 @@ class AbstractZendSlugifierTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function slugifyShouldTransliterateViaTransliterator()
     {

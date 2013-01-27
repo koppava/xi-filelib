@@ -4,10 +4,11 @@ namespace Xi\Filelib\Tests\Tool\MimeTypeResolver;
 
 use Xi\Filelib\Tests\TestCase as FilelibTestCase;
 
-class FileTest extends FilelibTestCase
+class MimeTypeResolverTest extends FilelibTestCase
 {
     /**
      * @test
+     * @group parallel
      */
     public function interfaceShouldExist()
     {

@@ -14,6 +14,7 @@ class StupidTransliteratorTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function interfaceShouldExist()
     {

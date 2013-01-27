@@ -21,6 +21,7 @@ class IntlTransliteratorTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function interfaceShouldExist()
     {

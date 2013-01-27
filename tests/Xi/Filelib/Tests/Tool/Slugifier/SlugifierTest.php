@@ -9,11 +9,11 @@
 
 namespace Xi\Filelib\Tests\Tool\Slugifier;
 
-class SlugifierTest
+class SlugifierTest extends \PHPUnit_Framework_TestCase
 {
-
     /**
      * @test
+     * @group parallel
      */
     public function interfaceShouldExist()
     {

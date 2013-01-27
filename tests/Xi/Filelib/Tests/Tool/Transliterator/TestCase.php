@@ -30,6 +30,7 @@ abstract class TestCase extends \PHPUnit_Framework_TestCase
     /**
      * @dataProvider provideBasicStrings
      * @test
+     * @group parallel
      */
     public function transliteratorShouldCorrectlyTransliterateBasicStrings($untransliterated, $transliterated)
     {

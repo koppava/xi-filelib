@@ -23,6 +23,7 @@ class Zend2SlugifierTest extends TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function classShouldExist()
     {
@@ -33,6 +34,7 @@ class Zend2SlugifierTest extends TestCase
 
    /**
      * @test
+     * @group parallel
      */
     public function getFilterShouldReturnAnInstanceOfZendFilterChainAndCacheItsResult()
     {

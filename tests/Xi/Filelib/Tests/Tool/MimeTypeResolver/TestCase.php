@@ -29,6 +29,7 @@ class TestCase extends FilelibTestCase
 
     /**
      * @test
+     * @group parallel
      * @dataProvider provideFiles
      */
     public function resolverShouldResolveCorrectType($path, $expectedType)
@@ -36,5 +37,4 @@ class TestCase extends FilelibTestCase
         $path = ROOT_TESTS . '/data/' . $path;
         $this->assertEquals($expectedType, $this->resolver->resolveMimeType($path));
     }
-
 }

@@ -14,6 +14,7 @@ class TransliteratorTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function interfaceShouldExist()
     {
