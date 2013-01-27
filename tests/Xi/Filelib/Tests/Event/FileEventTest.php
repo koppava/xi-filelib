@@ -9,6 +9,7 @@ class FileEventTest extends \Xi\Filelib\Tests\TestCase
 {
     /**
      * @test
+     * @group parallel
      */
     public function classShouldExist()
     {
@@ -19,6 +20,7 @@ class FileEventTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function eventShouldInitializeCorrectly()
     {

@@ -9,6 +9,7 @@ class PluginEventTest extends \Xi\Filelib\Tests\TestCase
 {
     /**
      * @test
+     * @group parallel
      */
     public function classShouldExist()
     {
@@ -21,6 +22,7 @@ class PluginEventTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function eventShouldInitializeCorrectly()
     {

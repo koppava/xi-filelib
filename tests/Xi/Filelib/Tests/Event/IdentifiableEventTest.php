@@ -8,6 +8,7 @@ class IdentifiableEventTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @test
+     * @group parallel
      */
     public function classExists()
     {
@@ -19,6 +20,7 @@ class IdentifiableEventTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function eventInitializesCorrectly()
     {

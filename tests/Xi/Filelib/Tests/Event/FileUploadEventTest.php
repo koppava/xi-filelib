@@ -10,6 +10,7 @@ class FileUploadEventTest extends \Xi\Filelib\Tests\TestCase
 {
     /**
      * @test
+     * @group parallel
      */
     public function classShouldExist()
     {
@@ -22,6 +23,7 @@ class FileUploadEventTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function eventShouldInitializeCorrectly()
     {
@@ -38,6 +40,7 @@ class FileUploadEventTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function fileUploadShouldBeReplacable()
     {
