@@ -25,6 +25,7 @@ class SimpleAclTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function classShouldExist()
     {
@@ -106,6 +107,7 @@ class SimpleAclTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      * @dataProvider provideFiles
      */
     public function isReadableShouldReturnExpectedResultsForFiles($res, $readable, $writable, $readableByAnonymous)
@@ -116,6 +118,7 @@ class SimpleAclTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      * @dataProvider provideFolders
      */
     public function IsReadableShouldReturnExpectedResultForFolders($res, $readable, $writable, $readableByAnonymous)
@@ -126,6 +129,7 @@ class SimpleAclTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      * @dataProvider provideFiles
      */
     public function isWritableShouldReturnExpectedResultsForFiles($res, $readable, $writable, $readableByAnonymous)
@@ -136,6 +140,7 @@ class SimpleAclTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      * @dataProvider provideFolders
      */
     public function IsWritableShouldReturnExpectedResultForFolders($res, $readable, $writable, $readableByAnonymous)
@@ -146,6 +151,7 @@ class SimpleAclTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      * @dataProvider provideFiles
      */
     public function isAnonymousReadableShouldReturnExpectedResultsForFiles($res, $readable, $writable, $readableByAnonymous)
@@ -156,6 +162,7 @@ class SimpleAclTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      * @dataProvider provideFolders
      */
     public function IsAnonymousReadableShouldReturnExpectedResultForFolders($res, $readable, $writable, $readableByAnonymous)
@@ -166,6 +173,7 @@ class SimpleAclTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      * @dataProvider provideFiles
      */
     public function setReadableByAnonymousShouldReverseReadableByAnonymousResultsForFiles($res, $readable, $writable, $readableByAnonymous)
@@ -182,6 +190,7 @@ class SimpleAclTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      * @dataProvider provideFolders
      */
     public function setReadableByAnonymousShouldReverseReadableByAnonymousResultsForFolders($res, $readable, $writable, $readableByAnonymous)
@@ -193,7 +202,5 @@ class SimpleAclTest extends \Xi\Filelib\Tests\TestCase
         $this->assertEquals(false, $acl->isFolderReadableByAnonymous($res));
         $this->assertEquals($readable, $acl->isFolderReadable($res));
         $this->assertEquals($writable, $acl->isFolderWritable($res));
-
     }
-
 }

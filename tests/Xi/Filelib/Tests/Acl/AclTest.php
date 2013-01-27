@@ -7,6 +7,7 @@ class AclTest extends \Xi\Filelib\Tests\TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function interfaceShouldExist()
     {

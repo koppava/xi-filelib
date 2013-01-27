@@ -72,6 +72,7 @@ class SymfonyAclTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function isFolderBasedShouldRespectConstructorArgument()
     {
@@ -85,6 +86,7 @@ class SymfonyAclTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function classShouldExist()
     {
@@ -94,6 +96,7 @@ class SymfonyAclTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function classShouldInstantiateCorrectly()
     {
@@ -107,6 +110,7 @@ class SymfonyAclTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function isFileReadableShouldDelegateFileToSecurityContextWhenFolderBasedIsFalse()
     {
@@ -123,6 +127,7 @@ class SymfonyAclTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function isFileReadableShouldDelegateFolderToSecurityContextWhenFolderBasedIsTrue()
     {
@@ -143,6 +148,7 @@ class SymfonyAclTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function isFileWritableShouldDelegateFileToSecurityContextWhenFolderBasedIsFalse()
     {
@@ -159,6 +165,7 @@ class SymfonyAclTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function isFileWritableShouldDelegateFolderToSecurityContextWhenFolderBasedIsTrue()
     {
@@ -179,6 +186,7 @@ class SymfonyAclTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function isFolderReadableShouldDelegateFolderToSecurityContext()
     {
@@ -195,6 +203,7 @@ class SymfonyAclTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function isFolderWritableShouldDelegateFolderToSecurityContext()
     {
@@ -211,6 +220,7 @@ class SymfonyAclTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function isFileReadableByAnonymousShouldDelegateToFolderWhenAclIsFolderBased()
     {
@@ -236,6 +246,7 @@ class SymfonyAclTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function isFileReadableByAnonymousShouldDelegateToAclWhenAclIsNotFolderBased()
     {
@@ -255,6 +266,7 @@ class SymfonyAclTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function isFolderReadableByAnonymousShouldDelegateToAcl()
     {
@@ -273,6 +285,7 @@ class SymfonyAclTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function anonymousAclQueryShouldReturnFalseWhenAclIsNotFoundForObject()
     {
@@ -292,6 +305,7 @@ class SymfonyAclTest extends \PHPUnit_Framework_TestCase
 
     /**
      * @test
+     * @group parallel
      */
     public function anonymousAclQueryShouldDelegateToIsGrantedWhenAclIsFound()
     {
@@ -312,19 +326,4 @@ class SymfonyAclTest extends \PHPUnit_Framework_TestCase
         $ret = $acl->anonymousAclQueryWith($file);
 
     }
-
-    /**
-     * @xtest
-     */
-    public function isFolderReadableByAnonymousShouldReturnFalse()
-    {
-        $folder = Folder::create(array('id' => 1));
-
-        $acl = new SymfonyAcl($this->filelib, $this->context, $this->aclProvider, false);
-
-        $ret = $acl->isFolderReadableByAnonymous($folder);
-
-        $this->assertFalse($ret);
-    }
-
 }
