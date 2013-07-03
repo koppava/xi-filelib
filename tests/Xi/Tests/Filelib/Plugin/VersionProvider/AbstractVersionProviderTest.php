@@ -64,7 +64,7 @@ class AbstractVersionProviderTest extends TestCase
         $filelib->expects($this->any())->method('getStorage')->will($this->returnValue($storage));
 
         $plugin = $this->getMockBuilder('Xi\Filelib\Plugin\VersionProvider\AbstractVersionProvider')
-            ->setMethods(array('createVersions', 'deleteVersions', 'getStorage', 'getVersions', 'getExtensionFor'))
+            ->setMethods(array('createVersions', 'getStorage', 'getVersions', 'getExtensionFor'))
             ->getMockForAbstractClass();
 
         $plugin->expects($this->any())->method('getStorage')->will($this->returnValue($storage));
