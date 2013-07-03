@@ -17,7 +17,7 @@ set_include_path(implode(PATH_SEPARATOR, array(
 )));
 
 spl_autoload_register(function($class) {
-    $filename = str_replace("_", DIRECTORY_SEPARATOR, $class) . '.php';
+    $filename = str_replace(array("\\", "_"), DIRECTORY_SEPARATOR, $class) . '.php';
 
     foreach (explode(PATH_SEPARATOR, get_include_path()) as $includePath) {
         if (file_exists($includePath . DIRECTORY_SEPARATOR . $filename)) {
