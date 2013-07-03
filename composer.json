@@ -1,5 +1,5 @@
 {
-    "name": "xi/filelib",
+    "name": "koppava/filelib",
     "type": "library",
     "description": "File library for PHP 5.3",
     "keywords": ["file management", "file", "image", "video"],
